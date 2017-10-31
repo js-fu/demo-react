@@ -39,10 +39,12 @@ class TodoApp extends Component {
       <div>
         <AddTodo onAddClick={addTodo} />
         <RemoveTodo onRemoveClick={removeTodo} />
-        <button onClick={() => {
-          let todos = this.props.todos;
-          console.log('todos app', todos);
-        }}>Get Todos</button>
+        <button
+          onClick={() => {
+            let todos = this.props.todos;
+            console.log('todos app', todos);
+          }}
+        >Get Todos</button>
 
         <TodoList todos={todos} />
       </div>

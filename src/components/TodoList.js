@@ -7,7 +7,7 @@ const TodoItem = ({ todo }) => {
 const TodoList = ({ todos }) => {
   return (
     <ul>
-      { todos.map(todo => <TodoItem key={todo.todoId} todo={todo}/>) }
+      { todos.map(todo => <TodoItem key={todo.todoId} todo={todo} />) }
     </ul>
   );
 }

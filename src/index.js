@@ -19,7 +19,7 @@ import './index.css';
 const store = createStore(rootReducer);
 // console.log({ store, 'store state': store.getState() });
 
-const appLocale = Math.random() > 0.5 ? appLocales.zhHansCNLocale :  appLocales.enUSLocale;
+const appLocale = Math.random() > 0.5 ? appLocales.zhHansCNLocale : appLocales.enUSLocale;
 
 addLocaleData(appLocale.data);
 

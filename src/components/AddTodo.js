@@ -6,14 +6,16 @@ const AddTodo = ({ onAddClick }) => {
   return (
     <form>
       <input type="text" ref={ref => input = ref} />
-      <button onClick={ev => {
-        ev.preventDefault();
-        if(!input.value) {
-          return false;
-        }
-        onAddClick(input.value);
-        input.value = '';
-      }}>Add Todo</button>
+      <button
+        onClick={ev => {
+          ev.preventDefault();
+          if (!input.value) {
+            return false;
+          }
+          onAddClick(input.value);
+          input.value = '';
+        }}
+      >Add Todo</button>
     </form>
   );
 };

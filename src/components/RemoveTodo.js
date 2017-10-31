@@ -6,14 +6,16 @@ const RemoveTodo = ({ onRemoveClick }) => {
   return (
     <form>
       <input type="text" ref={ref => input = ref} />
-      <button onClick={ev => {
-        ev.preventDefault();
-        if(!input.value) {
-          return false;
-        }
-        onRemoveClick(input.value);
-        input.value = '';
-      }}>Remove Todo</button>
+      <button
+        onClick={ev => {
+          ev.preventDefault();
+          if (!input.value) {
+            return false;
+          }
+          onRemoveClick(input.value);
+          input.value = '';
+        }}
+      >Remove Todo</button>
     </form>
   );
 };
