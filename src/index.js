@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import MyRouters from './MyRouters';
+import { HashRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -16,6 +16,8 @@ import appLocales from './appLocales';
 import 'antd/dist/antd.css';
 import './index.css';
 
+import App from './App.js';
+
 const store = createStore(rootReducer);
 // console.log({ store, 'store state': store.getState() });
 
@@ -27,7 +29,9 @@ ReactDOM.render(
   <Provider store={store}>
     <LocaleProvider locale={appLocale.antdLocale}>
       <IntlProvider locale={appLocale.intlLocale} messages={appLocale.messages}>
-        <MyRouters />
+        <HashRouter basename="/">
+          <App />
+        </HashRouter>
       </IntlProvider>
     </LocaleProvider>
   </Provider>,
